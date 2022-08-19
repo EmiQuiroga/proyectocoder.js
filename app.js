@@ -53,12 +53,49 @@ console.log(nombre);
 
 alert ('Hola' + " " + nombre);*/
 
-let numero1 = prompt('Ingresa el año actual');
+/*let numero1 = prompt('Ingresa el año actual');
 let numero2 = prompt('Ingresa tu año de nacimiento');
 
 let resultado = parseInt(numero1) - parseInt(numero2);
 
-alert( 'Tu edad es o está por ser' + ' ' + resultado);
+alert( 'Tu edad es o está por ser' + ' ' + resultado);*/
+
+
+/*const puntaje = 2000;
+
+if (puntaje == 1000) {
+    console.log("Es igual");
+} 
+else {
+    ("No es igual");
+}*/
+
+//OPERADORES LÓGICOS
+/* 
+=== Estrictamente igual
+!== No es estrictamente igual 
+
+*/
+
+// DESAFÍO COMPLEMENTARIO "CREAR UN ALGORITMO UTILIZANDO UN CICLO"
+
+let ingresarNumero = parseInt (prompt ('Ingresar número'));
+
+for (let i = 1; i <= 10; i++) {
+    let resultado = ingresarNumero / i;
+    if (resultado == 4) {
+        break;
+    }
+    alert (ingresarNumero + " / " + i + " = " + resultado );
+} 
+
+
+
+
+ 
+
+
+
 
 
 
