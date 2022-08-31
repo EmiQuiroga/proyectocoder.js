@@ -4,9 +4,9 @@ class Producto{
     this.precio = precio;
 }}
 
-const producto1 = new Producto ("Cuarzo blanco", 600, 01);
-const producto2 = new Producto ('Amatista', 800, 02);
-const producto3 = new Producto ('Palo Santo 200gr', 800, 03);
+const producto1 = new Producto ("Cuarzo blanco", 600);
+const producto2 = new Producto ('Amatista', 800);
+const producto3 = new Producto ('Palo Santo 200gr', 800);
 
 
 const miArray = [producto1, producto2, producto3];
