@@ -145,6 +145,40 @@ function sumar (primerNumero, segundoNumero){
 
 resultado = sumar (6,6);
 console.log(resultado);
+
+
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8];
+for (let i=0; i < numeros.length; i++) {
+    alert(numeros[i]);
+}
+
+const miArray = ["marca", 3, "palabra"];
+miArray.shift ();
+
+console.log(miArray);
+
+const nombres = ["Juan", "Emilia", "Uma", "Sofía"];
+const apellidos = ["Morello", "Quiroga"];
+apellidos.reverse();
+console.log(apellidos);
+
+const listaNombres = [];
+let cantidad = 5;
+
+do {
+    let entrada = prompt ("Ingresar nombre");
+    listaNombres.push (entrada.toUpperCase());
+    console.log(listaNombres.length);
+}
+while (listaNombres.length != cantidad);
+
+const nuevaLista = listaNombres.concat (["María", "Dolores"]);
+
+
+alert(nuevaLista.join("\n)"));
+
 */
+
+
 
 
