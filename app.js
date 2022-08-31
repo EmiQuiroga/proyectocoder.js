@@ -60,7 +60,6 @@ let resultado = parseInt(numero1) - parseInt(numero2);
 
 alert( 'Tu edad es o está por ser' + ' ' + resultado);*/
 
-
 /*const puntaje = 2000;
 
 if (puntaje == 1000) {
@@ -75,7 +74,6 @@ else {
 === Estrictamente igual
 !== No es estrictamente igual 
 
-*/
 
 // DESAFÍO COMPLEMENTARIO "CREAR UN ALGORITMO UTILIZANDO UN CICLO"
 
@@ -88,18 +86,65 @@ for (let i = 1; i <= 10; i++) {
     }
     alert (ingresarNumero + " / " + i + " = " + resultado );
 } 
+*/
 
+//FUNCIONES
 
+/*function solicitarNombre () {
+    let nombreIngresado = prompt ("ingresar nombre")
+    alert ("El nombre ingresado es " + nombreIngresado);
+}
 
+solicitarNombre ();
+solicitarNombre ();
 
- 
+function conParametros (parametro1, parametro2, parametro3) {
+    console.log(parametro1 + " " + parametro2 + " " + parametro3);
+}
 
+conParametros("Hola", "Coder", "House");
+conParametros("Hola", "Emi", "Quiroga");
 
+function calculadora(primerNumero, segundoNumero, operacion) {
+    switch (operacion) {
+        case "+":
+            return primerNumero + segundoNumero;
+            break;
+        case "-":
+            return primerNumero - segundoNumero;
+            break;
+        case "*":
+            return primerNumero * segundoNumero;
+            break;
+        case "/":
+            return primerNumero / segundoNumero;
+            break;
+        default:
+            return 0;
+            break;
+        }
+    }
+                    
+console.log(calculadora (10, 5, "*"));
 
+const suma  = (a,b) => a + b
+const resta = (a,b) => a - b
+const iva   = x => x * 0.21
 
+let precioProducto = 400
+let descuento = 50
+let nuevoPrecio = resta (suma (precioProducto, iva(precioProducto)), descuento)
+console.log(nuevoPrecio);
+*/
 
+/*let resultado = 0
 
+function sumar (primerNumero, segundoNumero){
+    resultado = primerNumero + segundoNumero;
+}
 
-
+resultado = sumar (6,6);
+console.log(resultado);
+*/
 
 
