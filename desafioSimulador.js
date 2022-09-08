@@ -1,4 +1,4 @@
-//Desafío Simulador Interactivo
+/*//Desafío Simulador Interactivo
 //Declaración de objeto
 const Cuarzo = {
     nombre: "Cuarzo",
@@ -46,3 +46,4 @@ const Cuarzo = {
   //Llamado a las funciones
   Simulador();
   GenerarEtiqueta();
+  */

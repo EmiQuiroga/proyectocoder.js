@@ -1,5 +1,5 @@
-class Producto{
-    constructor (nombre, precio){
+/*class Producto{
+constructor (nombre, precio){
     this.nombre = nombre;
     this.precio = precio;
 }}
@@ -14,6 +14,7 @@ console.log(miArray);
 
 miArray.push (new Producto('Vela de Naranja', 250));
 miArray.push (new Producto('Péndulo amatista', 1800));
+*/
 
 
 

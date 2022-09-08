@@ -7,48 +7,84 @@ $color5: #f2e9e4;
 header,
 section,
 footer {
-  padding:0px;
+  padding: 0px;
   margin: 0px;
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
 }
 
 header {
-    background: linear-gradient(to right, $color3, $color4, $color5);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  background: linear-gradient(to right, $color3, $color4, $color5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.logo{
-    width:350px;
+.logo {
+  width: 250px;
 }
 
-.itemMenu {
-    text-transform: uppercase;
-    font-size: 16px;
-    text-decoration: none;
-    padding: 10px 20px;
-    list-style: none;
-    a { 
-        color: $color1;
-        text-decoration: none;}
-    a:hover {
-        color: $color2;
-    }
-}
-.menuHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+h1 {
+  text-align: center;
+  color: #4a4e69;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 20px;
 }
 
-#banner {
-    width: 97vw;
+h3 {
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 40px;
+  color: #9a8c98;
+}
+.container {
+  padding: 30px;
 }
 
-h1{
-    color:$color2;
+#productosTienda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
+.card {
+  box-shadow: 10px 10px 17px -3px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  margin: 15px;
+}
+
+.card-img-top:hover {
+  transform: scale(0.9, 0.9);
+  opacity: 0.8;
+  transition: 1s;
+}
+
+h5 {
+  text-align: center;
+  color: #4a4e69;
+}
+
+p {
+  text-align: center;
+  color: #22223b;
+  font-weight: bold;
+}
+
+#lupa {
+    width: 10px;
+}
+
+.btn {
+    background-color: $color3 !important;
+    border-color: $color3 !important;
+}
+
+.bg-light {
+    background-color: $color4 !important;
+    border: solid 1px $color2;
+    border-radius: 10px;
+}
+
+

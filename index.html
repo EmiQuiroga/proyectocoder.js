@@ -7,8 +7,11 @@
     <meta name="description" content="Tienda Esotérica">
     <meta name="keywords" content="Esoterismo, Aromaterapia, Cosmética natural, Gemas, Cuarzo, Tarot, Plantas medicinales, Amuletos">
     <title>Hécate Tienda</title>
+    <link rel="shortcut icon" href="assets/logo.png">
     
     <link rel="stylesheet" href="style/style.css">
+    <!-- CSS only bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,27 +21,162 @@
     <div>
     <a href="index.html"> <img class="logo" src="assets/logo.png" alt="logo"> </a>
     </div>
-    <nav class="nav" id="nav">
-        <ul class="menuHeader">
-            <li class="itemMenu"> <a href="index.html"> Home </a> </li>
-            <li class="itemMenu"> <a href="./html/tienda.html"> Tienda </a> </li>
-            <li class="itemMenu"> <a href="./html/contacto.html"> Contacto </a> </li>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Productos</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit"><img id="lupa" src="assets/busqueda-de-lupa.png" alt="lupa"></button>
+            </form>
+          </div>
+        </div>
+      </nav>
 </header>
 <body>
-    <div>
-    <h1>Bienvenidos a Hécate Tienda Esotérica</h1>
 
-    <h3>Amuletos y los más ricos aromas para tu bienestar</h3>
-    <img id="banner" src="assets/BannerWeb.png" alt="estatua de buda">
+       
+
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/velas.png" class="d-block w-100" alt="velas">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/piedras.png" class="d-block w-100" alt="piedras">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/altares.png" class="d-block w-100" alt="altares">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="container">
+            <h1>Hécate Tienda Esotérica</h1>
+            <h3>Nuestros Productos</h3>
+          </div>
+          <div class="container">
+            <div class="row" id="productosTienda">
+              <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+                <img src="assets/productoAceiteCaléndula.png" class="card-img-top" alt="Aceite esencial de caléndula">
+                <div class="card-body">
+                    <h5 class="card-title">Aceite esencial de Caléndula</h5>
+                    <p class="card-text">$900</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    
+                </div>
+            </div>
+            <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+                <img src="assets/productoAceiteCanela.png" class="card-img-top" alt="Aceite esencial de canela">
+                <div class="card-body">
+              <h5 class="card-title">Aceite esencial de Canela</h5>
+              <p class="card-text">$700</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+          </div>
+          <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoAceiteNaranja.png" class="card-img-top" alt="Aceite esencial de naranja">
+            <div class="card-body">
+              <h5 class="card-title">Aceite esencial de Naranja</h5>
+              <p class="card-text">$700</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+          </div>
+          <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoAmatista.png" class="card-img-top" alt="Piedra Amatista">
+            <div class="card-body">
+              <h5 class="card-title">Piedra Amatista</h5>
+              <p class="card-text">$800</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+          </div>
+          <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoCuarzoBlanco.png" class="card-img-top" alt="Cuarzo Blanco">
+            <div class="card-body">
+                <h5 class="card-title">Piedra Cuarzo Blanco</h5>
+                <p class="card-text">$800</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+        <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoMixPiedras.png" class="card-img-top" alt="variedad de piedras">
+            <div class="card-body">
+                <h5 class="card-title">Mix de piedras Sanación</h5>
+                <p class="card-text">$1500</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+        <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoBuda.png" class="card-img-top" alt="buda de yeso decoración">
+            <div class="card-body">
+                <h5 class="card-title">Buda para Altar</h5>
+                <p class="card-text">$850</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+        <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoIncienso.png" class="card-img-top" alt="Incienso">
+            <div class="card-body">
+                <h5 class="card-title">Pirámides de incienso</h5>
+                <p class="card-text">$300</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+        <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoComboSahumo.png" class="card-img-top" alt="Cuarzos, palo santo y sahumo">
+            <div class="card-body">
+                <h5 class="card-title">Combo Limpieza Energética</h5>
+                <p class="card-text">$1800</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+        <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoVela.png" class="card-img-top" alt="vela decoración">
+            <div class="card-body">
+                <h5 class="card-title">Vela de Vainilla</h5>
+                <p class="card-text">$350</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+        <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoVelonSoja.png" class="card-img-top" alt="Velón de Soja">
+            <div class="card-body">
+                <h5 class="card-title">Velón de Soja</h5>
+                <p class="card-text">$480</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+        <div class="card col-sm-12 col-md-4 col-lg-4" style="width: 18rem;">
+            <img src="assets/productoTresVelas.png" class="card-img-top" alt="Combo de tres velas">
+            <div class="card-body">
+                <h5 class="card-title">Mix tres velas</h5>
+                <p class="card-text">$900</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
     </div>
+</div>
+
+        
     <footer>
         <p>Copyright&#169 2022 - Hécate Tienda Esotérica</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="app.js"></script>
-   <script src="desafioSimulador.js"></script>
+    <script src="desafioSimulador.js"></script>
     <script src="desafioComplementarioArrays.js"></script>
+    <script src="primeraEntrega.js"></script>
 </body>
 </html>
