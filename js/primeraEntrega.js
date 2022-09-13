@@ -1,16 +1,9 @@
 //Plantilla de productos
-class Producto {
-  constructor(nombre, precio, id, categoria) {
-    this.nombre = nombre;
-    this.precio = precio;
-    this.id = id;
-    this.categoria = categoria;
-  }
-}
-//Productos de la tienda
+
+/*//Productos de la tienda
 const productoAceiteCalendula = new Producto(
-  "Aceite esencial de Caléndula",
-  900,
+    "Aceite esencial de Caléndula",
+    900,
   1,
   "aceites"
 );
@@ -113,3 +106,100 @@ console.log(carrito);
 
 //Llamado a la función
 agregar_al_carrito();
+*/
+class Producto {
+  constructor(nombre, precio, id, categoria, imagen) {
+    this.nombre = nombre;
+    this.precio = precio;
+    this.id = id;
+    this.categoria = categoria;
+    this.imagen = imagen;
+  }
+}
+
+const productos_tienda = [
+  {
+    nombre: "Aceite esencial de Caléndula",
+    precio: 900,
+    id: 1,
+    categoria: "aceites",
+    imagen: "",
+  },
+  {
+    nombre: "Aceite esencial de Canela",
+    precio: 900,
+    id: 2,
+    categoria: "aceites",
+    imagen: "",
+  },
+  {
+    nombre: "Aceite esencial de Naranja",
+    precio: 900,
+    id: 3,
+    categoria: "aceites",
+    imagen: "",
+  },
+  {
+    nombre: "Piedra Amatista",
+    precio: 600,
+    id: 4,
+    categoria: "piedras",
+    imagen: "",
+  },
+  {
+    nombre: "Piedra Cuarzo Blanco",
+    precio: 500,
+    id: 5,
+    categoria: "piedras",
+    imagen: "",
+  },
+  {
+    nombre: "Mix Piedras Sanación",
+    precio: 1200,
+    id: 6,
+    categoria: "piedras",
+    imagen: "",
+  },
+  {
+    nombre: "Buda de Yeso",
+    precio: 800,
+    id: 7,
+    categoria: "altares",
+    imagen: "",
+  },
+  {
+    nombre: "Pirámide de Incienso",
+    precio: 300,
+    id: 8,
+    categoria: "sahumos",
+    imagen: "",
+  },
+  {
+    nombre: "Mix Limpieza Energética",
+    precio: 1800,
+    id: 9,
+    categoria: "sahumos",
+    imagen: "",
+  },
+  {
+    nombre: "Vela de Vainilla",
+    precio: 500,
+    id: 10,
+    categoria: "velas",
+    imagen: "",
+  },
+  {
+    nombre: "Velón de Soja",
+    precio: 500,
+    id: 11,
+    categoria: "velas",
+    imagen: "",
+  },
+  {
+    nombre: "Mix Tres Velas",
+    precio: 900,
+    id: 12,
+    categoria: "velas",
+    imagen: "",
+  },
+];
