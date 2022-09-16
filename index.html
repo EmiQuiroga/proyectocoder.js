@@ -37,8 +37,8 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit"><img id="lupa" src="assets/busqueda-de-lupa.png" alt="lupa"></button>
+              <input  class="form-control me-2" onchange="" type="search" placeholder="¿Qué estás buscando?" aria-label="Search" id="search_input">
+              <button class="btn btn-outline-success" onsubmit="Search" type="submit"><img id="lupa" src="assets/busqueda-de-lupa.png" alt="lupa"></button>
             </form>
           </div>
         </div>
@@ -61,7 +61,6 @@
                   </div>
                 </div>
               </div>
-        </div>
         <div class="container">
             <h1>Hécate Tienda Esotérica</h1>
             <h3>Nuestros Productos</h3>
@@ -69,6 +68,25 @@
           <div class="container">
               <div class="row" id="productosTienda">
     </div>
+</div>
+<div class="container">
+  <div id="carrito"></div>
+</div>
+<div class="container">
+  <h3>Suscribite a nuestro newsletter y obtené un 15% de descuento en tu primera compra!</h3>
+  <div>
+    <form id="form_suscripcion">
+      <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name"  >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+      </div>
+      <button type="submit" class="btn btn-primary" id="enviar_info">Enviar</button>
+    </form>
+  </div>
 </div>
 
         

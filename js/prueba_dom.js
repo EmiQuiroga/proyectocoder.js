@@ -77,19 +77,15 @@ const productos = [
     categoria: "velas",
     imagen: "assets/productoVelonSoja.png",
   },
- 
 ];
 
-productos.push(
-  {
-   nombre: "Mix Tres Velas",
-   precio: 900,
-   id: 12,
-   categoria: "velas",
-   imagen: "assets/productoTresVelas.png",
- }
-);
-
+productos.push({
+  nombre: "Mix Tres Velas",
+  precio: 900,
+  id: 12,
+  categoria: "velas",
+  imagen: "assets/productoTresVelas.png",
+});
 
 //Función para mostrar los productos del array en el DOM
 const mostrar_productos = () => {
@@ -102,7 +98,7 @@ const mostrar_productos = () => {
   <div class="card-body">
     <h5 class="card-title">${producto.nombre}</h5>
     <p class="card-text">${producto.precio}</p>
-    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+    <a href="#" class="btn btn-primary" id="boton" onClick="agregar_al_carrito()">Añadir al carrito</a>
   </div>`;
     contenedor.appendChild(card);
   });
@@ -110,6 +106,18 @@ const mostrar_productos = () => {
 
 mostrar_productos();
 
+/*const agregar_al_carrito = () => {
+  let cont_carrito = document.getElementById("carrito");
+  console.log(cont_carrito);
+}
+
+agregar_al_carrito();*/
+
+
+
+/*const agregar_al_carrito = () => {
+  alert("Producto agregado al carrito");
+};*/
 
 
 
