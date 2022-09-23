@@ -106,7 +106,6 @@ console.log(carrito);
 
 //Llamado a la función
 agregar_al_carrito();
-*/
 class Producto {
   constructor(nombre, precio, id, categoria, imagen) {
     this.nombre = nombre;
@@ -203,3 +202,5 @@ const productos_tienda = [
     imagen: "",
   },
 ];
+
+    */

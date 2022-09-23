@@ -1,5 +1,3 @@
-/*
-//Array de productos
 const productos = [
   {
     nombre: "Aceite esencial de Caléndula",
@@ -97,11 +95,11 @@ const mostrar_productos = () => {
     let card = document.createElement("div");
     card.classList.add("card", "col-sm-12", "col-md-6", "col-lg-6");
     card.innerHTML = `<img src="${producto.imagen}" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">${producto.nombre}</h5>
-    <p class="card-text">${producto.precio}</p>
-    <a class="btn btn-primary" id="boton" onClick="agregar_al_carrito(${indice})">Añadir al carrito</a>
-  </div>`;
+    <div class="card-body">
+      <h5 class="card-title">${producto.nombre}</h5>
+      <p class="card-text">${producto.precio}</p>
+      <a class="btn btn-primary" id="boton" onClick="agregar_al_carrito(${indice})">Añadir al carrito</a>
+    </div>`;
     contenedor.appendChild(card);
   });
 };
@@ -127,7 +125,7 @@ const agregar_al_carrito = (indice) => {
     mostrar_carrito();
   }
 };
-
+//let subtotal= 0;
 let total = 0;
 
 //Función para que se muestre el carrito con los productos seleccionados
@@ -142,20 +140,20 @@ const mostrar_carrito = () => {
       carrito_contenedor.innerHTML = `<img class="car-img" src="${
         producto.imagen
       }"/>
-    <div class="product-details">${producto.nombre}</div>
-    <div class="product-details"> Cantidad: ${producto.cantidad}</div>
-    <div class="product-details">Precio: $ ${producto.precio}</div>
-    <div class="product-details">Subtotal: $ ${
-      producto.precio * producto.cantidad
-    }</div>
-    <button class= "btn btn-primary" id="remove-product" onClick="removeProduct(${indice})">Eliminar producto</button>
-    `;
+      <div class="product-details">${producto.nombre}</div>
+      <div class="product-details"> Cantidad: ${producto.cantidad}</div>
+      <div class="product-details">Precio: $ ${producto.precio}</div>
+      <div class="product-details">Subtotal: $ ${
+        producto.precio * producto.cantidad
+      }</div>
+      <button class= "btn btn-primary" id="remove-product" onClick="removeProduct(${indice})">Eliminar producto</button>
+      `;
       modal_carrito.appendChild(carrito_contenedor);
     });
     const total_contenedor = document.createElement("div");
     total_contenedor.className = "totalCarrito";
     total_contenedor.innerHTML = `<div class = "total"> Total $ ${total}</div>
-  <button class= "btn btn-primary" id="finalizar" onClick = "finalizarCompra()"> Finalizar Compra </button>`;
+    <button class= "btn btn-primary" id="finalizar" onClick = "finalizarCompra()"> Finalizar Compra </button>`;
     modal_carrito.appendChild(total_contenedor);
   } else {
     modal_carrito.classList.remove("cart");
@@ -193,20 +191,35 @@ const suscripcionCliente = () => {
   let cliente1 = new Cliente(nombre, email);
   console.log(cliente1);
   mensajeCliente(cliente1);
+
+  //Guardar información del cliente en localStorage
+  localStorage.setItem("nombre", nombre);
+  localStorage.setItem("email", email);
 };
+
 
 //Añadir un evento al botón
 boton.addEventListener("click", suscripcionCliente);
 
 //Eliminar formulario y mostrar un mensaje al cliente que se suscribió
 const mensajeCliente = (cliente) => {
-  let formulario = document.getElementById("form_suscripcion");
-  formulario.innerHTML = "";
-  let nuevoMensaje = document.createElement("div");
-
-  nuevoMensaje.innerHTML = `<h4>Gracias ${cliente.nombre} por tu suscripción! Revisá tu correo que recibiste un regalito &#128156</h4>`;
-  nuevoMensaje.className = "suscripcion_cliente";
-  formulario.appendChild(nuevoMensaje);
-  return cliente;
+    let formulario = document.getElementById("form_suscripcion");
+    formulario.innerHTML = "";
+    let nuevoMensaje = document.createElement("div");
+    
+    nuevoMensaje.innerHTML = `<h4>Gracias ${cliente.nombre} por tu suscripción! Revisá tu correo que recibiste un regalito &#128156</h4>`;
+    nuevoMensaje.className = "suscripcion_cliente";
+    formulario.appendChild(nuevoMensaje);
+    return cliente;
 };
-*/
+
+//Recuperar datos desde LocalStorage
+const obtenerDatos = () => {
+  let nombre = JSON.stringify(localStorage.getItem("nombre"));
+  let email = JSON.stringify(localStorage.getItem("email"));
+
+  console.log(nombre);
+  console.log(email);
+};
+
+obtenerDatos();

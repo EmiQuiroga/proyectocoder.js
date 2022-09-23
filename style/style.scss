@@ -39,6 +39,7 @@ h3 {
   padding-top: 40px;
   color: #9a8c98;
 }
+
 .container {
   padding: 30px;
 }
@@ -54,6 +55,23 @@ h3 {
   padding-top: 10px;
   margin: 15px;
   width: 14rem !important;
+  h5 {text-align: center;
+    color: #4a4e69;}
+  p {text-align: center;
+    color: #22223b;
+    font-weight: bold;}
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.btn {
+  background-color: $color3 !important;
+  border-color: $color3 !important;
 }
 
 .card-img-top:hover {
@@ -62,30 +80,55 @@ h3 {
   transition: 1s;
 }
 
-h5 {
-  text-align: center;
-  color: #4a4e69;
-}
-
-p {
-  text-align: center;
-  color: #22223b;
-  font-weight: bold;
-}
-
 #lupa {
-    width: 10px;
-}
-
-.btn {
-    background-color: $color3 !important;
-    border-color: $color3 !important;
+  width: 10px;
 }
 
 .bg-light {
-    background-color: $color4 !important;
-    border: solid 1px $color2;
-    border-radius: 10px;
+  background-color: $color4 !important;
+  border: solid 1px $color2;
+  border-radius: 10px;
 }
 
+.suscripcion_cliente {
+  background-color: $color1;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
 
+#form_suscripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: $color5;
+  border: solid $color2;
+}
+
+.productoCarrito {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 20px;
+}
+
+.car-img {
+  width: 40px;
+}
+
+.product-details {
+  padding-left: 10px;
+  padding-right: 10px;
+}

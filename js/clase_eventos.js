@@ -26,7 +26,8 @@ const mensajeCliente = (cliente) => {
   formulario.innerHTML = "";
   let nuevoMensaje = document.createElement("div");
 
-  nuevoMensaje.innerHTML = `<h3>Gracias ${cliente.nombre} por tu suscripción! Revisá tu correo que recibiste un regalito &#128525</h3>`;
+  nuevoMensaje.innerHTML = `<h4>Gracias ${cliente.nombre} por tu suscripción! Revisá tu correo que recibiste un regalito &#128156</h4>`;
   nuevoMensaje.className = "suscripcion_cliente";
   formulario.appendChild(nuevoMensaje);
+  return cliente;
 };
