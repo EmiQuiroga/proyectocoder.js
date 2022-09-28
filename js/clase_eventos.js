@@ -1,3 +1,4 @@
+/*
 //Constructor del cliente que va a llenar el formulario
 class Cliente {
   constructor(nombre, email) {
@@ -31,3 +32,4 @@ const mensajeCliente = (cliente) => {
   formulario.appendChild(nuevoMensaje);
   return cliente;
 };
+*/

@@ -129,35 +129,37 @@ const agregar_al_carrito = (indice) => {
 let total = 0;
 
 //Función para que se muestre el carrito con los productos seleccionados
+
+showProds = () => {
+  cart.forEach((producto, indice) => {
+    total = total + producto.precio * producto.cantidad;
+    const carrito_contenedor = document.createElement("div");
+    carrito_contenedor.className = "productoCarrito";
+    carrito_contenedor.innerHTML = `<img class="car-img" src="${
+      producto.imagen
+    }"/>
+    <div class="product-details">${producto.nombre}</div>
+    <div class="product-details"> Cantidad: ${producto.cantidad}</div>
+    <div class="product-details">Precio: $ ${producto.precio}</div>
+    <div class="product-details">Subtotal: $ ${
+      producto.precio * producto.cantidad
+    }</div>
+    <button class= "btn btn-primary" id="remove-product" onClick="removeProduct(${indice})">Eliminar producto</button>
+    `;
+    modal_carrito.appendChild(carrito_contenedor);
+  });
+  const total_contenedor = document.createElement("div");
+  total_contenedor.className = "totalCarrito";
+  total_contenedor.innerHTML = `<div class = "total"> Total $ ${total}</div>
+  <button class= "btn btn-primary" id="finalizar" onClick = "finalizarCompra()"> Finalizar Compra </button>`;
+  modal_carrito.appendChild(total_contenedor);
+};
+
+//if else optimizado con un operador ternario
 const mostrar_carrito = () => {
   modal_carrito.className = "cart";
   modal_carrito.innerHTML = "";
-  if (cart.length > 0) {
-    cart.forEach((producto, indice) => {
-      total = total + producto.precio * producto.cantidad;
-      const carrito_contenedor = document.createElement("div");
-      carrito_contenedor.className = "productoCarrito";
-      carrito_contenedor.innerHTML = `<img class="car-img" src="${
-        producto.imagen
-      }"/>
-      <div class="product-details">${producto.nombre}</div>
-      <div class="product-details"> Cantidad: ${producto.cantidad}</div>
-      <div class="product-details">Precio: $ ${producto.precio}</div>
-      <div class="product-details">Subtotal: $ ${
-        producto.precio * producto.cantidad
-      }</div>
-      <button class= "btn btn-primary" id="remove-product" onClick="removeProduct(${indice})">Eliminar producto</button>
-      `;
-      modal_carrito.appendChild(carrito_contenedor);
-    });
-    const total_contenedor = document.createElement("div");
-    total_contenedor.className = "totalCarrito";
-    total_contenedor.innerHTML = `<div class = "total"> Total $ ${total}</div>
-    <button class= "btn btn-primary" id="finalizar" onClick = "finalizarCompra()"> Finalizar Compra </button>`;
-    modal_carrito.appendChild(total_contenedor);
-  } else {
-    modal_carrito.classList.remove("cart");
-  }
+  cart.length > 0 ? showProds() : modal_carrito.classList.remove("cart");
 };
 
 //Función para eliminar productos del carrito
@@ -197,20 +199,19 @@ const suscripcionCliente = () => {
   localStorage.setItem("email", email);
 };
 
-
 //Añadir un evento al botón
 boton.addEventListener("click", suscripcionCliente);
 
 //Eliminar formulario y mostrar un mensaje al cliente que se suscribió
 const mensajeCliente = (cliente) => {
-    let formulario = document.getElementById("form_suscripcion");
-    formulario.innerHTML = "";
-    let nuevoMensaje = document.createElement("div");
-    
-    nuevoMensaje.innerHTML = `<h4>Gracias ${cliente.nombre} por tu suscripción! Revisá tu correo que recibiste un regalito &#128156</h4>`;
-    nuevoMensaje.className = "suscripcion_cliente";
-    formulario.appendChild(nuevoMensaje);
-    return cliente;
+  let formulario = document.getElementById("form_suscripcion");
+  formulario.innerHTML = "";
+  let nuevoMensaje = document.createElement("div");
+
+  nuevoMensaje.innerHTML = `<h4>Gracias ${cliente.nombre} por tu suscripción! Revisá tu correo que recibiste un regalito &#128156</h4>`;
+  nuevoMensaje.className = "suscripcion_cliente";
+  formulario.appendChild(nuevoMensaje);
+  return cliente;
 };
 
 //Recuperar datos desde LocalStorage
