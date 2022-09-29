@@ -191,8 +191,7 @@ const suscripcionCliente = () => {
   let nombre = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let cliente1 = new Cliente(nombre, email);
-  console.log(cliente1);
-  mensajeCliente(cliente1);
+  nuevoForm();
 
   //Guardar información del cliente en localStorage
   localStorage.setItem("nombre", nombre);
@@ -202,15 +201,15 @@ const suscripcionCliente = () => {
 //Añadir un evento al botón
 boton.addEventListener("click", suscripcionCliente);
 
-//Eliminar formulario y mostrar un mensaje al cliente que se suscribió
-const mensajeCliente = () => {
-  let formulario = document.getElementById("form_suscripcion");
+//Eliminar formulario una vez que el cliente se suscribió
+const nuevoForm = () => {
+  let formulario = document.getElementById("form");
   formulario.innerHTML = "";
 
-  let nuevoMensaje = document.createElement("div");
+  let nuevoFormulario = document.createElement("div");
 
-  nuevoMensaje.innerHTML = "";
-  formulario.appendChild(nuevoMensaje);
+  nuevoFormulario.innerHTML = "";
+  formulario.appendChild(nuevoFormulario);
 };
 
 //Recuperar datos desde LocalStorage
