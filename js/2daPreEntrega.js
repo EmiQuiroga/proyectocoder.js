@@ -203,15 +203,14 @@ const suscripcionCliente = () => {
 boton.addEventListener("click", suscripcionCliente);
 
 //Eliminar formulario y mostrar un mensaje al cliente que se suscribió
-const mensajeCliente = (cliente) => {
+const mensajeCliente = () => {
   let formulario = document.getElementById("form_suscripcion");
   formulario.innerHTML = "";
+
   let nuevoMensaje = document.createElement("div");
 
-  nuevoMensaje.innerHTML = `<h4>Gracias ${cliente.nombre} por tu suscripción! Revisá tu correo que recibiste un regalito &#128156</h4>`;
-  nuevoMensaje.className = "suscripcion_cliente";
+  nuevoMensaje.innerHTML = "";
   formulario.appendChild(nuevoMensaje);
-  return cliente;
 };
 
 //Recuperar datos desde LocalStorage
@@ -224,3 +223,19 @@ const obtenerDatos = () => {
 };
 
 obtenerDatos();
+
+//Aplicando librería sweetalert
+
+const button = document.getElementById("enviar_info");
+
+button.addEventListener("click", () => {
+  Swal.fire({
+    title: "¡Gracias!",
+    text: "Revisá tu correo y disfrutá nuestro regalito 💜",
+
+    confirmButtonText: "Aceptar",
+    imageUrl: "assets/logo.png",
+    imageWidth: 200,
+    imageHeight: 200,
+  });
+});
