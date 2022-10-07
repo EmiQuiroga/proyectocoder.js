@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "Mix Tres Velas",
+        "precio": 900,
+        "id": 12,
+        "categoria": "velas",
+        "imagen": "assets/productoTresVelas.png"
+      },
+      {
+        "nombre": "Tarot de Marsella",
+        "precio": 2000,
+        "id": 13,
+        "categoria": "tarot",
+        "imagen": "assets/tarot4.png"
+       }
+]

@@ -1,4 +1,4 @@
-  /*if (cart.length > 0) {
+  if (cart.length > 0) {
     cart.forEach((producto, indice) => {
       total = total + producto.precio * producto.cantidad;
       const carrito_contenedor = document.createElement("div");
@@ -23,4 +23,5 @@
     modal_carrito.appendChild(total_contenedor);
   } else {
     modal_carrito.classList.remove("cart");
-  }*/
+  }
+

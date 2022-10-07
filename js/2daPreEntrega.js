@@ -76,6 +76,8 @@ const productos = [
     categoria: "velas",
     imagen: "assets/productoVelonSoja.png",
   },
+
+
 ];
 
 //Agrego un producto al array con el método push
@@ -85,7 +87,35 @@ productos.push({
   id: 12,
   categoria: "velas",
   imagen: "assets/productoTresVelas.png",
-});
+},
+{
+  nombre: "Tarot de Marsella",
+  precio: 2000,
+  id: 13,
+  categoria: "tarot",
+  imagen: "assets/tarot4.png",
+ },
+ {
+  nombre: "Tarot Rider",
+  precio: 2000,
+  id: 14,
+  categoria: "tarot",
+  imagen: "assets/tarot1.png",
+ },
+ {
+  nombre: "Tarot Holográfico",
+  precio: 2500,
+  id: 15,
+  categoria: "tarot",
+  imagen: "assets/tarot2.png",
+ },
+ {
+  nombre: "Tarot Egipcio",
+  precio: 2500,
+  id: 16,
+  categoria: "tarot",
+  imagen: "assets/tarot3.png",
+ });
 
 //Función para mostrar los productos del array en el DOM
 const mostrar_productos = () => {
@@ -144,8 +174,7 @@ showProds = () => {
     <div class="product-details">Subtotal: $ ${
       producto.precio * producto.cantidad
     }</div>
-    <button class= "btn btn-primary" id="remove-product" onClick="removeProduct(${indice})">Eliminar producto</button>
-    `;
+    <button class= "btn btn-primary" id="remove-product" onClick="removeProduct(${indice})">Eliminar producto</button>`;
     modal_carrito.appendChild(carrito_contenedor);
   });
   const total_contenedor = document.createElement("div");
@@ -238,3 +267,20 @@ button.addEventListener("click", () => {
     imageHeight: 200,
   });
 });
+
+/*fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json))*/
+
+/*fetch('https://jsonplaceholder.typicode.com/posts')
+.then ((resp)=>console.log(resp))
+.then ((data)=>console.log(data))*/
+     
+/*const urlFotos = "https://jsonplaceholder.typicode.com/photos?limit=10";
+
+fetch(urlFotos)
+.then(res => res.json())
+.then(pic => console.log(pic[2].title));*/
+
+
+
