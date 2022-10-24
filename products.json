@@ -12,5 +12,19 @@
         "id": 13,
         "categoria": "tarot",
         "imagen": "assets/tarot4.png"
-       }
+       },
+       {
+        "nombre": "Tarot Rider",
+        "precio": 2000,
+        "id": 14,
+        "categoria": "tarot",
+        "imagen": "assets/tarot1.png"
+       },
+       {
+        "nombre": "Piedra Cuarzo Blanco",
+        "precio": 500,
+        "id": 5,
+        "categoria": "piedras",
+        "imagen": "assets/productoCuarzoBlanco.png"
+        }
 ]

@@ -24,7 +24,6 @@ h1 {
   color: #4a4e69;
   font-weight: bolder;
   text-transform: uppercase;
-  padding-top: 20px;
 }
 
 h3 {
@@ -32,16 +31,21 @@ h3 {
   font-weight: bolder;
   padding-top: 40px;
   color: #9a8c98;
+  text-transform: uppercase;
+}
+
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: medium !important;
 }
 
 .container {
-  padding: 30px;
+  padding: 40px;
 }
 
-#productosTienda {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+#form {
+  background-color: #f2e9e4;
 }
 
 .card {
@@ -72,12 +76,6 @@ h3 {
   border-color: #9a8c98 !important;
 }
 
-.card-img-top:hover {
-  transform: scale(0.9, 0.9);
-  opacity: 0.8;
-  transition: 1s;
-}
-
 #lupa {
   width: 10px;
 }
@@ -97,55 +95,99 @@ h3 {
 }
 
 .cart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 20px;
   margin: 20px;
-  background-color: #f2e9e4;
-  border: solid #4a4e69;
+  border: solid 1px #4a4e69;
 }
 
 .productoCarrito {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left;
+  justify-content: space-around;
+  align-content: stretch;
   padding: 20px;
 }
 
 .car-img {
-  width: 40px;
+  width: 60px;
 }
 
-.product-details {
-  padding-left: 10px;
-  padding-right: 10px;
+#cartCompra {
+  width: 25px;
 }
 
-.field {
-  margin-bottom: 10px;
+.totalCarrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.field label {
-  display: block;
-  font-size: 12px;
-  color: #777;
+.total {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: larger;
 }
 
-.field input {
-  display: block;
-  min-width: 250px;
-  line-height: 1.5;
-  font-size: 14px;
+#productosTienda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-input[type=submit] {
-  display: block;
-  padding: 6px 30px;
-  font-size: 14px;
-  background-color: #4460AA;
-  color: #fff;
-  border: none;
+#products {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#resultado {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#formBuscar {
+  width: 50%;
+}
+
+.compra_final {
+  text-align: center;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #4a4e69;
+  font-weight: 600;
+}
+
+#logoFin {
+  width: 250px;
+}
+
+.compra_finalizada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  color: black !important;
+  text-transform: uppercase;
+}
+
+#footer {
+  text-align: center;
+  padding: 40px;
 }/*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@ const productos = [
     id: 1,
     categoria: "aceites",
     imagen: "assets/productoAceiteCaléndula.png",
+    etiqueta: "aceite, esencia, aceite esencial, aceites, esencias"
   },
   {
     nombre: "Aceite esencial de Canela",
@@ -12,6 +13,7 @@ const productos = [
     id: 2,
     categoria: "aceites",
     imagen: "assets/productoAceiteCanela.png",
+    etiqueta: "aceite, esencia, aceite esencial, aceites, esencias"
   },
   {
     nombre: "Aceite esencial de Naranja",
@@ -19,6 +21,7 @@ const productos = [
     id: 3,
     categoria: "aceites",
     imagen: "assets/productoAceiteNaranja.png",
+    etiqueta: "aceite, esencia, aceite esencial, aceites, esencias"
   },
   {
     nombre: "Piedra Amatista",
@@ -26,6 +29,7 @@ const productos = [
     id: 4,
     categoria: "piedras",
     imagen: "assets/productoAmatista.png",
+    etiqueta: "piedras, piedra, cuarzo, gema, gemas, cuarzos, amatista"
   },
   {
     nombre: "Piedra Cuarzo Blanco",
@@ -33,6 +37,7 @@ const productos = [
     id: 5,
     categoria: "piedras",
     imagen: "assets/productoCuarzoBlanco.png",
+    etiqueta: "piedras, piedra, cuarzo, gema, gemas, cuarzos, cuarzo blanco"
   },
   {
     nombre: "Mix Piedras Sanación",
@@ -40,6 +45,7 @@ const productos = [
     id: 6,
     categoria: "piedras",
     imagen: "assets/productoMixPiedras.png",
+    etiqueta: "piedras, piedra, cuarzo, gema, gemas, cuarzos, sanacion"
   },
   {
     nombre: "Buda de Yeso",
@@ -47,6 +53,7 @@ const productos = [
     id: 7,
     categoria: "altares",
     imagen: "assets/productoBuda.png",
+    etiqueta: "altar, altares, buda, amuleto"
   },
   {
     nombre: "Pirámide de Incienso",
@@ -54,6 +61,7 @@ const productos = [
     id: 8,
     categoria: "sahumos",
     imagen: "assets/productoIncienso.png",
+    etiqueta: "sahumerio, sahumerios, sahumo, sahumos, incienso"
   },
   {
     nombre: "Mix Limpieza Energética",
@@ -61,6 +69,7 @@ const productos = [
     id: 9,
     categoria: "sahumos",
     imagen: "assets/productoComboSahumo.png",
+    etiqueta: "sahumerio, sahumerios, sahumo, sahumos, incienso, palo santo, piedras, piedra, cuarzo"
   },
   {
     nombre: "Vela de Vainilla",
@@ -68,6 +77,7 @@ const productos = [
     id: 10,
     categoria: "velas",
     imagen: "assets/productoVela.png",
+    etiqueta: "vela, velas, vela de vainilla, hogar, altar"
   },
   {
     nombre: "Velón de Soja",
@@ -75,47 +85,53 @@ const productos = [
     id: 11,
     categoria: "velas",
     imagen: "assets/productoVelonSoja.png",
+    etiqueta: "vela, velas, hogar, altar, velon"
   },
-
-
 ];
 
 //Agrego un producto al array con el método push
-productos.push({
-  nombre: "Mix Tres Velas",
-  precio: 900,
-  id: 12,
-  categoria: "velas",
-  imagen: "assets/productoTresVelas.png",
-},
-{
-  nombre: "Tarot de Marsella",
-  precio: 2000,
-  id: 13,
-  categoria: "tarot",
-  imagen: "assets/tarot4.png",
- },
- {
-  nombre: "Tarot Rider",
-  precio: 2000,
-  id: 14,
-  categoria: "tarot",
-  imagen: "assets/tarot1.png",
- },
- {
-  nombre: "Tarot Holográfico",
-  precio: 2500,
-  id: 15,
-  categoria: "tarot",
-  imagen: "assets/tarot2.png",
- },
- {
-  nombre: "Tarot Egipcio",
-  precio: 2500,
-  id: 16,
-  categoria: "tarot",
-  imagen: "assets/tarot3.png",
- });
+productos.push(
+  {
+    nombre: "Mix Tres Velas",
+    precio: 900,
+    id: 12,
+    categoria: "velas",
+    imagen: "assets/productoTresVelas.png",
+    etiqueta: "vela, velas, vela de vainilla, hogar, altar"
+  },
+  {
+    nombre: "Tarot de Marsella",
+    precio: 2000,
+    id: 13,
+    categoria: "tarot",
+    imagen: "assets/tarot4.png",
+    etiqueta: "tarot, oraculo, oraculos, cartas"
+  },
+  {
+    nombre: "Tarot Rider",
+    precio: 2000,
+    id: 14,
+    categoria: "tarot",
+    imagen: "assets/tarot1.png",
+    etiqueta: "tarot, oraculo, oraculos, cartas"
+  },
+  {
+    nombre: "Tarot Holográfico",
+    precio: 2500,
+    id: 15,
+    categoria: "tarot",
+    imagen: "assets/tarot2.png",
+    etiqueta: "tarot, oraculo, oraculos, cartas"
+  },
+  {
+    nombre: "Tarot Egipcio",
+    precio: 2500,
+    id: 16,
+    categoria: "tarot",
+    imagen: "assets/tarot3.png",
+    etiqueta: "tarot, oraculo, oraculos, cartas"
+  }
+);
 
 //Función para mostrar los productos del array en el DOM
 const mostrar_productos = () => {
@@ -123,7 +139,7 @@ const mostrar_productos = () => {
 
   productos.forEach((producto, indice) => {
     let card = document.createElement("div");
-    card.classList.add("card", "col-sm-12", "col-md-6", "col-lg-6");
+    card.classList.add("card", "col-sm-12", "col-md-6", "col-lg-4");
     card.innerHTML = `<img src="${producto.imagen}" class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">${producto.nombre}</h5>
@@ -138,7 +154,7 @@ mostrar_productos();
 
 //Carrito
 let cart = [];
-let modal_carrito = document.getElementById("cart");
+let modal_carrito = document.getElementById("carrito");
 
 //Función para agregar los productos al carrito
 const agregar_al_carrito = (indice) => {
@@ -179,7 +195,7 @@ showProds = () => {
   });
   const total_contenedor = document.createElement("div");
   total_contenedor.className = "totalCarrito";
-  total_contenedor.innerHTML = `<div class = "total"> Total $ ${total}</div>
+  total_contenedor.innerHTML = `<div class = "total">$${total}</div>
   <button class= "btn btn-primary" id="finalizar" onClick = "finalizarCompra()"> Finalizar Compra </button>`;
   modal_carrito.appendChild(total_contenedor);
 };
@@ -201,7 +217,7 @@ const removeProduct = (indice) => {
 const finalizarCompra = () => {
   const total = document.getElementsByClassName("total")[0].innerHTML;
   modal_carrito.innerHTML = "";
-  const compraFinalizada = `<div class="compra-finalizada"><p class="compra_final">GRACIAS POR COMPRAR EN HÉCATE, tu compra es de ${total}</p></div>`;
+  const compraFinalizada = `<div class="compra_finalizada"><img src="assets/logo.png" class="card-img-top" id="logoFin"><p class="compra_final">GRACIAS POR COMPRAR EN HÉCATE, tu compra es de ${total}</p></div>`;
   modal_carrito.innerHTML = compraFinalizada;
 };
 
@@ -268,19 +284,63 @@ button.addEventListener("click", () => {
   });
 });
 
-/*fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json))*/
+//Traer productos al DOM utilizando Fetch
+var contenido = document.getElementById("products");
 
-/*fetch('https://jsonplaceholder.typicode.com/posts')
-.then ((resp)=>console.log(resp))
-.then ((data)=>console.log(data))*/
-     
-/*const urlFotos = "https://jsonplaceholder.typicode.com/photos?limit=10";
+function traer() {
+  fetch("../products.json")
+    .then((res) => res.json())
+    .then((productosRecientes) => {
+      //console.log(productosRecientes);
+      tabla(productosRecientes);
+    });
+}
 
-fetch(urlFotos)
-.then(res => res.json())
-.then(pic => console.log(pic[2].title));*/
+traer();
+
+function tabla(productosRecientes) {
+  console.log(productosRecientes);
+  for (let producto of productosRecientes) {
+    contenido.innerHTML += `<div class="card" style="width: 18rem;">
+    <img src="${producto.imagen}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">${producto.nombre}</h5>
+    </div>
+    </div>`;
+  }
+}
+
+//Función para crear un buscador de productos
+const buscador = document.getElementById("formBuscar");
+const bot = document.getElementById("botonBuscar");
+const resultado = document.getElementById("resultado");
+
+const filtrar = () => {
+  resultado.innerHTML = "";
+  const texto = buscador.value.toLowerCase();
+
+  for (let producto of productos) {
+    let etiquetas = producto.etiqueta.toLowerCase();
+    if (etiquetas.indexOf(texto) !== -1) {
+      resultado.innerHTML +=
+        //`<li>${producto.nombre} -Precio: ${producto.precio}</li>`
+        `<div class="card style="width: 18rem;">
+<img src="${producto.imagen}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">${producto.nombre}</h5>
+      <p class="card-text">${producto.precio}</p>
+      <a class="btn btn-primary" id="boton" onClick="agregar_al_carrito()">Añadir al carrito</a>
+    </div>
+    </div>`;
+    }
+  }
+
+  if (resultado.innerHTML === "") {
+    resultado.innerHTML += `<h4>Producto no encontrado...</h4>`;
+  }
+};
+
+bot.addEventListener("click", filtrar);
 
 
 

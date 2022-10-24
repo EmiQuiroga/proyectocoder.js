@@ -16,36 +16,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('nTxI6TASGVKYnF3XN')
-</script>
 </head>
 <header>
     <div>
     <a href="index.html"> <img class="logo" src="assets/logo.png" alt="logo"> </a>
     </div>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input  class="form-control me-2" onchange="" type="search" placeholder="¿Qué estás buscando?" aria-label="Search" id="search_input">
-              <button class="btn btn-outline-success" onsubmit="Search" type="submit"><img id="lupa" src="assets/busqueda-de-lupa.png" alt="lupa"></button>
-            </form>
-          </div>
-        </div>
-      </nav>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#productosTienda">Productos</a>
+      </li>
+    </ul>
+      <a href="#carrito"><button type="button" class="btn btn-primary"><img id="cartCompra" src="assets/cart.svg" alt="carrito" ></button></a> 
 </header>
 <body>
 
@@ -64,20 +48,36 @@
                   </div>
                 </div>
               </div>
+
+
         <div class="container">
-            <h1>Hécate Tienda Esotérica</h1>
-            <h3>Nuestros Productos</h3>
+            
+            <h3>Nuestros Productos ☪</h3>
           </div>
           <div class="container">
               <div class="row" id="productosTienda">
     </div>
 </div>
+
+<h3>¡Los más vendidos! 🖤</h3>
+<div id="products">
+</div>
+
+<h3>¿Qué estás buscando?👁</h3>
+<div class="container" id="search">
+  <input type="text" id="formBuscar" class="form-control">
+  <button class="btn btn-primary" id="botonBuscar">Buscar</button>
+  </div>
+  <div id="resultado">
+    
+  </div>
+
 <div class="container">
   <div id="carrito"></div>
 </div>
 
 <div class="container" id="form">
-  <h3>Suscribite a nuestro newsletter y obtené un 15% de descuento en tu primera compra!</h3>
+  <h4>Suscribite a nuestro newsletter y obtené un 15% de descuento en tu primera compra!</h4>
   <form id="form_suscripcion">
     <div class="mb-3">
       <label for="exampleInputName" class="form-label">Nombre</label>
@@ -89,46 +89,18 @@
     </div>
     <button type="submit" class="btn btn-primary" id="enviar_info">Enviar</button>
   </form>
-</div>
 
-  <div id="cart">
 
-</div>
-
-<form id="formulario">
-  <div class="field">
-    <label for="from_name">Nombre y Apellido</label>
-    <input type="text" name="from_name" id="from_name">
-  </div>
-  <div class="field">
-    <label for="message">Mensaje</label>
-    <input type="text" name="message" id="message">
-  </div>
-  <div class="field">
-    <label for="email">email</label>
-    <input type="text" name="email" id="email">
-  </div>
-
-  <input type="submit" id="button" value="Enviar" >
-</form>
-
-<div id="products">
-Productos Recientes
- 
-<ul class="recientes">
-  
-</ul>
 
 </div>
 
-
-    <footer>
-        <p>Copyright&#169 2022 - Hécate Tienda Esotérica</p>
+<footer>
+        <p id="footer">Copyright&#169 2022 - Hécate Tienda Esotérica</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/2daPreEntrega.js"></script>
-    <script src="./js/contacto.js"></script>
 </body>
 </html>
